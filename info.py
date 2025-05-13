@@ -11,7 +11,7 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'z')
+SESSION = environ.get('SESSION', 'n')
 API_ID = int(environ.get('API_ID', '15829854'))
 API_HASH = environ.get('API_HASH', 'effcefa1b8fb65aa2b3210c85c75121d')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
@@ -36,13 +36,13 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://123:123@cluster0.nhql83l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "z")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'z')
+DATABASE_NAME = environ.get('DATABASE_NAME', "n")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'n')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002219357868'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'search_zone_support')
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "ɴᴀᴍᴇ: <code>{file_name}</code> \n\nᴊᴏɪɴ ɴᴏᴡ: [✅️ Updates Channel ✅️](https://t.me/TechnicalBichu)</b>")
